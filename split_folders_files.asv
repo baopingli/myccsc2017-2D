@@ -1,0 +1,9 @@
+function [folders,files] = split_folders_files(input)
+
+B=struct2cell(input);%将结构数组转换为单元数组
+dirs=cell2mat(B(5,:));
+floders=input(logical(dirs));
+files=input(~logical(dir))
+
+end
+
